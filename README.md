@@ -13,10 +13,6 @@
 
 Projeto desenvolvido para o aprendizado. Ele consiste em reproduzir o jogo da memória, tendo como objetivo encontrar todos os pares de cartas.
 
-### Imagens
-
-As imagens foram tiradas do [pinterest](https://br.pinterest.com/) e editadas.
-
 ##  Demonstração
 
 <p align="center">
