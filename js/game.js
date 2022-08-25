@@ -30,6 +30,7 @@ function checkWinGame() {
     if(disabledCard.length == 20) {
         clearInterval(this.loop);
         alert(`Parabéns ${namePlayer.innerHTML} || Seu tempo foi de: ${timer.innerHTML}`);
+        window.location.reload();
     }
 }
 
@@ -40,7 +41,7 @@ function checkCards() {
     if(firstCharacter == secondCharacter) {
         firstCard.firstChild.classList.add('disabled-card');
         secondCard.firstChild.classList.add('disabled-card');
-    
+
         firstCard = '';
         secondCard = '';
 
@@ -49,7 +50,7 @@ function checkCards() {
         setTimeout(() => {
             firstCard.classList.remove('reveal-card');
             secondCard.classList.remove('reveal-card');
-            
+
             firstCard = '';
             secondCard = '';
         }, 1000)
@@ -76,12 +77,12 @@ function createCard(characters) {
     const card = createElement('div', 'card');
     const cardFront = createElement('div', 'face card-front');
     const cardBack = createElement('div', 'face card-back');
-    
+
     cardFront.style.backgroundImage = `url('../images/${characters}.png')`;
-    
+
     card.appendChild(cardFront);
     card.appendChild(cardBack);
-    
+
     card.setAttribute('data-character', characters);
     card.addEventListener('click', revealCard);
 
